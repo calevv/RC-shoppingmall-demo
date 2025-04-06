@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Cafe24Ohsquare';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.top-area {
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    padding: 10px;
+}
+
+.search-part {
+    border-bottom: 1px solid #999;
+    padding: 2px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.login-button {
+    display: flex;
+    padding: 2px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.logo-area {
+    font-family: 'Cafe24Ohsquare' !important;
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+}
+.menu-area {
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+}
+ul.menu-list {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    font-size: 20px;
+    line-height: 1;
+}

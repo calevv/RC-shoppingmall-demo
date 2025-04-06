@@ -1,0 +1,19 @@
+.productCardBox {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.productCardBox:hover {
+    padding: 5px;
+    transform: scale(1.08);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.productCardBox > img {
+    width: 100%;
+}
+.productCardBox > div {
+    min-height: 20px;
+}
