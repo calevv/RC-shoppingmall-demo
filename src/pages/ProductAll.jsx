@@ -5,7 +5,7 @@ import { ProductCard } from '../components/ProductCard';
 const ProductAll = () => {
     const [productList, setProductList] = useState([]);
     const getProduct = async () => {
-        let url = `https://my-json-server.typicode.com/calevv/RC-shoppingmall-demo/db`;
+        let url = `https://my-json-server.typicode.com/calevv/RC-shoppingmall-demo`;
         let response = await fetch(url);
         let data = await response.json();
         setProductList(data);
