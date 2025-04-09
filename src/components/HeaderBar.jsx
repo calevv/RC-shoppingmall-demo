@@ -3,26 +3,36 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 const HeaderBar = () => {
-    const menuList = ['여성', 'Divided', '남성', '신생아/유아', '아동', 'Homewear', 'Sale', '지속가능성'];
+    const menuList = ['All', 'Wemen', 'Men', 'Kids', 'Home'];
     const navigate = useNavigate();
     const goToLogin = () => {
         navigate('/login');
+    };
+
+    const search = (event) => {
+        if (event.key === 'Enter') {
+            let keyWord = event.target.value;
+            console.log(keyWord);
+            navigate(`/?q=${keyWord}`);
+        }
     };
     return (
         <div>
             <div className="top-area">
                 <div className="search-part">
                     <FontAwesomeIcon icon={faSearch} />
-                    <input type="text" placeholder="search..." />
+                    <input type="text" placeholder="search..." onKeyDown={(event) => search(event)} />
                 </div>
                 <div className="login-button" onClick={goToLogin}>
                     <FontAwesomeIcon icon={faUser} />
                     <div>로그인</div>
                 </div>
             </div>
-            <div className="logo-area">제이 앤 제이</div>
+            <div className="logo-area">
+                <Link to="/">제이 앤 제이</Link>
+            </div>
             <div className="menu-area">
                 <ul className="menu-list">
                     {menuList.map((menu) => (

@@ -28,3 +28,16 @@ input {
     background-color: transparent; /* 배경색 투명하게 설정 (필요에 따라) */
     box-sizing: border-box; /* padding과 border가 width/height에 포함되도록 설정 */
 }
+a {
+    color: inherit;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}

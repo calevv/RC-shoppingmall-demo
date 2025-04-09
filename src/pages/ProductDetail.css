@@ -1,0 +1,13 @@
+.detailWrapper {
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 960px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 25px;
+    justify-content: center;
+}
+
+.detailWrapper > img {
+    width: 340px;
+}

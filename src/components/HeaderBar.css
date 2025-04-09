@@ -35,6 +35,8 @@
     display: flex;
     justify-content: center;
     font-style: italic;
+    cursor: pointer;
+    user-select: none;
 }
 .menu-area {
     display: flex;
@@ -43,8 +45,9 @@
 }
 ul.menu-list {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     list-style: none;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1;
+    padding: 10px 0;
 }
