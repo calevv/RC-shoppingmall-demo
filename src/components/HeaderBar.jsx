@@ -3,12 +3,14 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 
 const HeaderBar = ({ authenticate, setAuthenticate }) => {
     const menuList = ['All', 'Women', 'Men', 'Kids', 'Home'];
     const navigate = useNavigate();
     const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
+    const [query] = useSearchParams();
+    const currentCategory = query.get('category');
 
     const toggleSideMenu = () => {
         setIsSideMenuOpen(!isSideMenuOpen);
@@ -34,6 +36,11 @@ const HeaderBar = ({ authenticate, setAuthenticate }) => {
         }
     };
 
+    // 사이드 메뉴의 링크 클릭 시 호출될 함수
+    const handleSideMenuLinkClick = () => {
+        closeSideMenu(); // 사이드 메뉴를 닫음
+    };
+
     return (
         <div>
             <div className="top-area">
@@ -47,7 +54,15 @@ const HeaderBar = ({ authenticate, setAuthenticate }) => {
                         </div>
                         <ul className="side-menu-list">
                             {menuList.map((menu, index) => (
-                                <li key={index}>{menu}</li>
+                                <li key={index}>
+                                    <Link
+                                        to={`/?category=${menu}`}
+                                        className={currentCategory === menu ? 'on' : ''}
+                                        onClick={handleSideMenuLinkClick}
+                                    >
+                                        {menu}
+                                    </Link>
+                                </li>
                             ))}
                         </ul>
                     </div>
@@ -67,7 +82,11 @@ const HeaderBar = ({ authenticate, setAuthenticate }) => {
             <div className="menu-area">
                 <ul className="menu-list">
                     {menuList.map((menu, index) => (
-                        <li key={index}>{menu}</li>
+                        <li key={index}>
+                            <Link to={`/?category=${menu}`} className={currentCategory === menu ? 'on' : ''}>
+                                {menu}
+                            </Link>
+                        </li>
                     ))}
                 </ul>
             </div>

@@ -91,6 +91,7 @@
     pointer-events: none;
 }
 
+.menu-list li:has(.on):before,
 .menu-list li:hover:before,
 .menu-list li:focus:before {
     opacity: 0;
@@ -98,7 +99,7 @@
     -moz-transform: translateY(-2px);
     transform: translateY(-2px);
 }
-
+.menu-list li:has(.on):after,
 .menu-list li:hover:after,
 .menu-list li:focus:after {
     opacity: 1;
@@ -181,6 +182,9 @@
         font-size: 18px;
     }
     .side-menu-list li:hover {
+        color: #ff0000;
+    }
+    .side-menu-list li:has(.on) {
         color: #ff0000;
     }
 }

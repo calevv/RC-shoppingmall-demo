@@ -8,11 +8,20 @@ const ProductAll = () => {
     const [productList, setProductList] = useState([]);
     let [loading, setLoading] = useState(true);
     const [query, setQuery] = useSearchParams();
+
     const getProduct = async () => {
         let searchQuery = query.get('q') || '';
+        let categoryQuery = query.get('category');
+        let url = `https://my-json-server.typicode.com/calevv/RC-shoppingmall-demo/products`;
+
+        if (searchQuery) {
+            url += `/?q=${searchQuery}`;
+        } else if (categoryQuery && categoryQuery !== 'All') {
+            url += `/?category=${categoryQuery}`;
+        }
+
         try {
             setLoading(true);
-            let url = `https://my-json-server.typicode.com/calevv/RC-shoppingmall-demo/products/?q=${searchQuery}`;
             let response = await fetch(url);
             let data = await response.json();
             setProductList(data);
@@ -42,7 +51,7 @@ const ProductAll = () => {
             ) : (
                 <div className="container">
                     {productList.map((item) => (
-                        <ProductCard product={item} />
+                        <ProductCard key={item.id} product={item} />
                     ))}
                 </div>
             )}
