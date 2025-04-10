@@ -114,6 +114,7 @@
 @media (max-width: 768px) {
     .top-area {
         justify-content: space-between;
+        box-sizing: border-box;
     }
     .login-button > div {
         display: none;
