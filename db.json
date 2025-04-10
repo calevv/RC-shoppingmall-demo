@@ -2,7 +2,7 @@
     "products": [
         {
             "id": 1,
-            "category": "women",
+            "category": "Women",
             "img": "https://image.hm.com/assets/hm/50/1c/501c12586df5e43473232ecb498a465c5ad093a4.jpg",
             "title": "레이스 트리밍 플레어 드레드",
             "price": 19900,
@@ -12,7 +12,7 @@
         },
         {
             "id": 2,
-            "category": "women",
+            "category": "Women",
             "img": "https://noona-hnm.netlify.app/ankle-jeans.jpeg",
             "title": "슬림핏 맘 하이웨이스트 앵클 진",
             "price": 29900,
@@ -22,7 +22,7 @@
         },
         {
             "id": 3,
-            "category": "kids",
+            "category": "Kids",
             "img": "https://image.hm.com/assets/hm/b9/41/b9419aa76cad971930d12bbf4c6460d93ee335d6.jpg",
             "title": "티어드 칼라 코튼 블라우스",
             "price": 29900,
@@ -32,7 +32,7 @@
         },
         {
             "id": 4,
-            "category": "women",
+            "category": "Women",
             "img": "https://noona-hnm.netlify.app/mash-dress.jpeg",
             "title": "셔링 메쉬 드레스",
             "price": 14900,
@@ -42,7 +42,7 @@
         },
         {
             "id": 5,
-            "category": "home",
+            "category": "Home",
             "img": "https://image.hm.com/assets/hm/4a/4a/4a4ad8eff02cd60bc1348226487526843d9e9d0c.jpg",
             "title": "스페클 글레이즈 스톤웨어 서빙 플레이트",
             "price": 29900,
@@ -52,7 +52,7 @@
         },
         {
             "id": 6,
-            "category": "home",
+            "category": "Home",
             "img": "https://image.hm.com/assets/hm/ee/c8/eec812c14241187328d78f4756cf8a4da326a974.jpg",
             "title": "아웃도어 쿠션 커버",
             "price": 14900,
@@ -62,7 +62,7 @@
         },
         {
             "id": 7,
-            "category": "women",
+            "category": "Women",
             "img": "https://noona-hnm.netlify.app/high-jeans.jpeg",
             "title": "플레어 로라이즈 진",
             "price": 29900,
@@ -72,7 +72,7 @@
         },
         {
             "id": 8,
-            "category": "women",
+            "category": "Women",
             "img": "https://image.hm.com/assets/hm/52/db/52db6cdc05d60f0aa8ecaf222471d3378e9fbc25.jpg",
             "title": "리넨 블렌드 셔츠 드레스",
             "price": 49900,
@@ -82,7 +82,7 @@
         },
         {
             "id": 9,
-            "category": "women",
+            "category": "Women",
             "img": "https://image.hm.com/assets/hm/fc/89/fc8999ceec723fb76753ccec411b6dc491ccde6d.jpg",
             "title": "벨티드 셔츠 드레스",
             "price": 34900,
@@ -92,7 +92,7 @@
         },
         {
             "id": 10,
-            "category": "women",
+            "category": "Women",
             "img": "https://image.hm.com/assets/hm/8d/99/8d995d9b04ab7cdb3b800fe8d28de66606f3142d.jpg",
             "title": "타이 디테일 데님 드레스",
             "price": 39900,
@@ -102,7 +102,7 @@
         },
         {
             "id": 11,
-            "category": "women",
+            "category": "Women",
             "img": "https://image.hm.com/assets/hm/38/5b/385b6c4dbf6d3ff58d4a5e95403871fcdb495be7.jpg",
             "title": "버터플라이 슬리브 브로드리 앙글레즈 드레스",
             "price": 39900,
@@ -112,7 +112,7 @@
         },
         {
             "id": 12,
-            "category": "kids",
+            "category": "Kids",
             "img": "https://image.hm.com/assets/hm/67/db/67dbef08fb12c5c581ab5e435c3c6c6281d220a1.jpg",
             "title": "코튼 모슬린 헤어 리본",
             "price": 12900,
@@ -122,7 +122,7 @@
         },
         {
             "id": 13,
-            "category": "kids",
+            "category": "Kids",
             "img": "https://image.hm.com/assets/hm/7c/82/7c82230485af9bd3961217c677adcb7e21bce9a3.jpg",
             "title": "아플리케 베이스볼 재킷",
             "price": 39900,
@@ -132,7 +132,7 @@
         },
         {
             "id": 14,
-            "category": "kids",
+            "category": "Kids",
             "img": "https://image.hm.com/assets/hm/82/f7/82f717dabe9ed1b6b67c22da26a4fd5ead3c5ed0.jpg",
             "title": "트윌 보머 재킷",
             "price": 59900,
@@ -142,7 +142,7 @@
         },
         {
             "id": 15,
-            "category": "kids",
+            "category": "Kids",
             "img": "https://image.hm.com/assets/hm/94/e7/94e7de44d1f161045307fecf51722712d3360cfd.jpg",
             "title": "코튼 드레스",
             "price": 14900,
@@ -152,7 +152,7 @@
         },
         {
             "id": 16,
-            "category": "men",
+            "category": "Men",
             "img": "https://image.hm.com/assets/hm/ca/84/ca8423bef1118e7149d56dec14cb734adc13915e.jpg?imwidth=256",
             "title": "옥스퍼드 셔츠 레귤러핏",
             "price": 29900,
@@ -162,7 +162,7 @@
         },
         {
             "id": 17,
-            "category": "men",
+            "category": "Men",
             "img": "https://image.hm.com/assets/hm/ca/7e/ca7eb87e7df55e6d18d7bf405ffc12fbfdd3f025.jpg?imwidth=256",
             "title": "레귤러핏 쇼트 슬리브 리넨 블렌드 셔츠",
             "price": 34900,
@@ -172,7 +172,7 @@
         },
         {
             "id": 18,
-            "category": "men",
+            "category": "Men",
             "img": "https://image.hm.com/assets/hm/cd/d7/cdd7aea4d00fc65196abef349fa469ee23b3d22b.jpg?imwidth=256",
             "title": "슬림핏 코튼 트윌 팬츠",
             "price": 29900,
@@ -182,7 +182,7 @@
         },
         {
             "id": 19,
-            "category": "men",
+            "category": "Men",
             "img": "https://image.hm.com/assets/hm/eb/76/eb7658ab727ce665d8b410343303e750573c0a51.jpg?imwidth=256",
             "title": "데님 재킷 루즈핏",
             "price": 79900,
@@ -192,7 +192,7 @@
         },
         {
             "id": 20,
-            "category": "men",
+            "category": "Men",
             "img": "https://image.hm.com/assets/hm/de/0c/de0c5ae5c9268292c09615f50fc86bc7d99d1a67.jpg?imwidth=256",
             "title": "데님 배기 쇼츠",
             "price": 54900,

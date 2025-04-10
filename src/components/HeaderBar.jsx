@@ -4,11 +4,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { Link, useNavigate } from 'react-router-dom';
-const HeaderBar = () => {
+const HeaderBar = ({ authenticate, setAuthenticate }) => {
     const menuList = ['All', 'Wemen', 'Men', 'Kids', 'Home'];
     const navigate = useNavigate();
     const goToLogin = () => {
-        navigate('/login');
+        if (authenticate) {
+            setAuthenticate(false);
+        } else {
+            navigate('/login');
+        }
     };
 
     const search = (event) => {
@@ -27,7 +31,7 @@ const HeaderBar = () => {
                 </div>
                 <div className="login-button" onClick={goToLogin}>
                     <FontAwesomeIcon icon={faUser} />
-                    <div>로그인</div>
+                    <div>{authenticate ? '로그아웃' : '로그인'}</div>
                 </div>
             </div>
             <div className="logo-area">
