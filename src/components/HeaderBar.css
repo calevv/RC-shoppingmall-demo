@@ -9,6 +9,7 @@
     justify-content: right;
     gap: 20px;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 .search-part {
@@ -114,7 +115,9 @@
 @media (max-width: 768px) {
     .top-area {
         justify-content: space-between;
-        box-sizing: border-box;
+    }
+    .search-part input {
+        width: 100px;
     }
     .login-button > div {
         display: none;
