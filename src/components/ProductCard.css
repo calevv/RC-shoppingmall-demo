@@ -17,3 +17,12 @@
 .productCardBox > div {
     min-height: 20px;
 }
+
+@media (max-width: 768px) {
+    .productCardBox:hover {
+        padding: 0px;
+        transform: none;
+        box-shadow: none;
+        border: 1px solid #333;
+    }
+}

@@ -1,12 +1,23 @@
 import './HeaderBar.css';
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { Link, useNavigate } from 'react-router-dom';
+
 const HeaderBar = ({ authenticate, setAuthenticate }) => {
-    const menuList = ['All', 'Wemen', 'Men', 'Kids', 'Home'];
+    const menuList = ['All', 'Women', 'Men', 'Kids', 'Home'];
     const navigate = useNavigate();
+    const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
+
+    const toggleSideMenu = () => {
+        setIsSideMenuOpen(!isSideMenuOpen);
+    };
+
+    const closeSideMenu = () => {
+        setIsSideMenuOpen(false);
+    };
+
     const goToLogin = () => {
         if (authenticate) {
             setAuthenticate(false);
@@ -22,9 +33,25 @@ const HeaderBar = ({ authenticate, setAuthenticate }) => {
             navigate(`/?q=${keyWord}`);
         }
     };
+
     return (
         <div>
             <div className="top-area">
+                <div className="mob-menu-list">
+                    <div className="side-menu-toggle" onClick={toggleSideMenu}>
+                        <FontAwesomeIcon icon={isSideMenuOpen ? faTimes : faBars} />
+                    </div>
+                    <div className={`side-menu-area ${isSideMenuOpen ? 'active' : ''}`}>
+                        <div className="side-menu-header">
+                            <FontAwesomeIcon icon={faTimes} onClick={closeSideMenu} className="close-button" />
+                        </div>
+                        <ul className="side-menu-list">
+                            {menuList.map((menu, index) => (
+                                <li key={index}>{menu}</li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
                 <div className="search-part">
                     <FontAwesomeIcon icon={faSearch} />
                     <input type="text" placeholder="search..." onKeyDown={(event) => search(event)} />
@@ -39,8 +66,8 @@ const HeaderBar = ({ authenticate, setAuthenticate }) => {
             </div>
             <div className="menu-area">
                 <ul className="menu-list">
-                    {menuList.map((menu) => (
-                        <li>{menu}</li>
+                    {menuList.map((menu, index) => (
+                        <li key={index}>{menu}</li>
                     ))}
                 </ul>
             </div>

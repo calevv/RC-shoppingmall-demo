@@ -28,6 +28,7 @@
 }
 
 .logo-area {
+    padding: 20px 0;
     font-family: 'Cafe24Ohsquare' !important;
     color: #ff0000;
     font-weight: bold;
@@ -43,11 +44,139 @@
     justify-content: center;
     padding: 20px 10px;
 }
-ul.menu-list {
+.menu-list {
     display: flex;
     gap: 20px;
     list-style: none;
     font-size: 18px;
     line-height: 1;
     padding: 10px 0;
+}
+
+.menu-list li {
+    cursor: pointer;
+    user-select: none;
+    text-shadow: none;
+    padding: 10px 0;
+    position: relative;
+}
+
+.menu-list li:before {
+    color: #fff;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+    content: attr(data-hover);
+    position: absolute;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    pointer-events: none;
+}
+
+.menu-list li:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff0000;
+    opacity: 0;
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+    transform: translateY(5px);
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    pointer-events: none;
+}
+
+.menu-list li:hover:before,
+.menu-list li:focus:before {
+    opacity: 0;
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    transform: translateY(-2px);
+}
+
+.menu-list li:hover:after,
+.menu-list li:focus:after {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+.side-menu-area,
+.side-menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .top-area {
+        justify-content: space-between;
+    }
+    .login-button > div {
+        display: none;
+    }
+    .mob-menu-list {
+        display: flex;
+        flex-direction: column;
+    }
+    .menu-area {
+        display: none;
+    }
+    .side-menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+    .side-menu-area {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100%;
+        background-color: #f8f8f8;
+        z-index: 1000;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        display: flex; /* 추가됨 */
+        flex-direction: column; /* 추가됨 */
+    }
+    .search-part {
+        border-bottom: none;
+    }
+    .side-menu-header {
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px;
+    }
+
+    .side-menu-header .close-button {
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .side-menu-area.active {
+        display: flex; /* 추가됨 */
+        transform: translateX(0);
+    }
+    .side-menu-list {
+        padding: 20px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        flex-grow: 1; /* 필요에 따라 */
+    }
+
+    .side-menu-list li {
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+    }
+    .side-menu-list li:hover {
+        color: #ff0000;
+    }
 }

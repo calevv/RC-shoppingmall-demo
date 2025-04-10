@@ -77,3 +77,8 @@
 .linkContainer span {
     margin: 0 5px;
 }
+@media (max-width: 768px) {
+    .loginContainer {
+        box-sizing: border-box;
+    }
+}

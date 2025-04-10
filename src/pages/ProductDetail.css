@@ -52,16 +52,16 @@
 
 @media (max-width: 960px) {
     .detailWrapper {
-        width: 100%; /* 화면 너비에 맞춤 */
+        width: 100%;
         display: flex;
-        flex-direction: column; /* 세로로 배치 */
-        align-items: center; /* 가운데 정렬 (선택 사항) */
-        gap: 20px; /* 간격 조정 */
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
     .detailWrapper > img {
-        width: 80%; /* 이미지 너비 조정 */
-        max-width: 400px; /* 최대 너비 제한 (선택 사항) */
+        width: 80%;
+        max-width: 400px;
     }
 
     .detailText {
@@ -80,7 +80,7 @@
 
     .detailText > select {
         font-size: 16px;
-        width: 100%; /* select 너비 조정 */
+        width: 90%;
     }
 
     .orderButton {
@@ -95,7 +95,7 @@
     }
 
     .detailWrapper > img {
-        width: 80%; /* 이미지 너비 조정 */
+        width: 90%; /* 이미지 너비 조정 */
     }
 
     .detailText {
@@ -111,15 +111,13 @@
     .detailText > h5 {
         font-size: 14px;
     }
-
-    .detailText > select {
-        font-size: 16px;
-        width: 100%; /* select 너비 조정 */
+}
+@media (max-width: 460px) {
+    .detailWrapper > img {
+        max-width: 300px;
     }
-
-    .orderButton {
-        width: 100%; /* 버튼 너비 조정 */
-        padding: 12px 20px;
-        font-size: 1.1em;
+    .detailText {
+        padding: 10px; /* 패딩 조정 */
+        gap: 10px; /* 간격 조정 */
     }
 }
